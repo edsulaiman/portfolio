@@ -73,7 +73,7 @@ const SkillAndExperience = () => {
       <div className="flex-[1]">
         <SkillAndExperienceTitle />
       </div>
-      <div className="flex-[3] flex flex-col gap-16">
+      <div className="flex-[3] flex flex-col gap-8">
         <Skills />
         <Experience />
       </div>
