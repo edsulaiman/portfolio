@@ -4,11 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProfileAvatar = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full">
-      <div className="rounded-full w-32 h-32 bg-secondary mb-8"></div>
-      <div className="text-2xl font-bold text-primary text-center">Edwin Sulaiman</div>
-      <div className="text-center">Fullstack & Mobile Developer</div>
-    </div>
+    <img
+      className="rounded-lg flex flex-col justify-center items-center h-full bg-secondary object-cover"
+      src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/01/14/4053358685.jpeg"
+    />
   );
 };
 
