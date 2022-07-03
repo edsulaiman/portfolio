@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="max-w-screen-xl	m-auto px-8 py-16 flex flex-col gap-16">
+      <div className="max-w-screen-xl	m-auto py-16 flex flex-col gap-16">
         <Profile />
         <SkillAndExperience />
         <ProjectList />

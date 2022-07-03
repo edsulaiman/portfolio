@@ -30,7 +30,7 @@ const ProjectList = () => {
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 px-8">
       <Title value="Projects" />
       <div className="grid grid-cols-12 gap-8">{items}</div>
     </div>
