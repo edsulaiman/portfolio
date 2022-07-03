@@ -9,7 +9,9 @@ const ProjectTitle = () => {
   return (
     <div className="flex flex-col gap-2">
       <Label value="Video Editing" />
-      <div className="text-3xl md:text-xl font-bold">Meet Your Newest Community Moderator: AutoMod Is Here</div>
+      <div className="text-xl font-bold">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue ante nec nulla dictum, quis tincidunt tortor efficitur.
+      </div>
     </div>
   );
 };
@@ -30,7 +32,7 @@ const ProjectList = () => {
   }
 
   return (
-    <div className="flex flex-col gap-8 px-8">
+    <div className="flex flex-col gap-8 px-8 md:px-0">
       <Title value="Projects" />
       <div className="grid grid-cols-12 gap-8">{items}</div>
     </div>

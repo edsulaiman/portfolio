@@ -3,7 +3,7 @@ type LabelProps = {
 };
 
 const Label = (props: LabelProps) => {
-  return <div className="text-lg text-primary font-bold">{props.value}</div>;
+  return <div className="text-primary font-bold uppercase">{props.value}</div>;
 };
 
 export default Label;

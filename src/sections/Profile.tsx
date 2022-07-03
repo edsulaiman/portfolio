@@ -16,11 +16,12 @@ const ProfileDetail = () => {
     <div className="flex flex-col gap-4">
       <div className="text-2xl text-primary font-bold">About Me</div>
       <div className="mb-8 text-onBackground">
-        I am Steven Miller, and I am looking for a job in Customer Services. I have 10 years of experience in related job positions. I started working as a
-        Customer Care Agent in a call center gradually moving to a Customer Experience Analyst. I am a team player. I am outgoing, dedicated, and open-minded. I
-        get across to people and adjust to changes with ease. I believe that a person should work on developing their professional skills and learning new
-        things all the time. Currently, I am looking for new career opportunities my current job position cannot provide. I have enough experience to occupy a
-        managing position and I will be glad to work on increasing the customer loyalty rate of your company.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas arcu. Donec eleifend gravida lectus id congue. Donec a dapibus justo. Nam
+        interdum erat vitae metus pretium euismod. Nunc congue vehicula turpis. Pellentesque hendrerit finibus tempus. Sed feugiat, ligula eget tincidunt
+        sollicitudin, odio dui volutpat ex, quis aliquam ex nisi sed arcu. Vivamus nec fermentum urna, ut sagittis est. Praesent imperdiet risus in dapibus
+        bibendum. Integer est urna, bibendum a massa a, finibus dignissim eros. Integer augue ligula, luctus eget sagittis a, maximus non quam. Cras euismod
+        orci eget eros tincidunt, in finibus dolor dapibus. Etiam aliquam eros id ante gravida bibendum vitae quis arcu. Curabitur vehicula pellentesque dui,
+        quis fringilla ante sodales nec.
       </div>
     </div>
   );
@@ -51,7 +52,7 @@ const Profile = () => {
       <div className="flex-[1]">
         <ProfileAvatar />
       </div>
-      <div className="flex-[3]">
+      <div className="flex-[3] flex flex-col justify-center">
         <ProfileDetail />
         <ProfileSocial />
       </div>
