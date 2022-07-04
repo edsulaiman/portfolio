@@ -1,0 +1,22 @@
+[
+  {
+    "name": "C#",
+    "value": 80
+  },
+  {
+    "name": "Dart",
+    "value": 70
+  },
+  {
+    "name": "Dotnet Core",
+    "value": 60
+  },
+  {
+    "name": "ASP.NET Core Web API",
+    "value": 80
+  },
+  {
+    "name": "Flutter",
+    "value": 80
+  }
+]

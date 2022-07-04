@@ -1,7 +1,7 @@
-import Profile from "../../components/Profile";
+import Profile from "./components/Profile";
 import Header from "./components/Header";
-import ProjectList from "./components/ProjectList";
-import SkillAndExperience from "./components/SkillAndExperience";
+import ProjectList from "../../components/ProjectList";
+import SkillsAndExperiences from "./components/SkillsAndExperiences";
 
 const HomePage = () => {
   return (
@@ -9,8 +9,8 @@ const HomePage = () => {
       <Header />
       <div className="max-w-screen-xl	m-auto md:px-8 py-16 flex flex-col gap-16">
         <Profile />
-        <SkillAndExperience />
-        <ProjectList />
+        <SkillsAndExperiences />
+        <ProjectList mainSection={true} />
       </div>
     </>
   );

@@ -1,0 +1,20 @@
+{
+  "name": "Edwin Sulaiman",
+  "position": "Fullstack & Mobile developer",
+  "image": "https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/01/14/4053358685.jpeg",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas arcu. Donec eleifend gravida lectus id congue. Donec a dapibus justo. Nam interdum erat vitae metus pretium euismod. Nunc congue vehicula turpis. Pellentesque hendrerit finibus tempus. Sed feugiat, ligula eget tincidunt sollicitudin, odio dui volutpat ex, quis aliquam ex nisi sed arcu. Vivamus nec fermentum urna, ut sagittis est. Praesent imperdiet risus in dapibus bibendum. Integer est urna, bibendum a massa a, finibus dignissim eros. Integer augue ligula, luctus eget sagittis a, maximus non quam. Cras euismod orci eget eros tincidunt, in finibus dolor dapibus. Etiam aliquam eros id ante gravida bibendum vitae quis arcu. Curabitur vehicula pellentesque dui, quis fringilla ante sodales nec.",
+  "social": [
+    {
+      "name": "instagram",
+      "value": "ed.sulaiman"
+    },
+    {
+      "name": "github",
+      "value": "edsulaiman"
+    },
+    {
+      "name": "email",
+      "value": "edwinsulaiman20@gmail.com"
+    }
+  ]
+}
