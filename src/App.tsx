@@ -1,18 +1,13 @@
-import Header from "./sections/Header";
-import Profile from "./sections/Profile";
-import ProjectList from "./sections/ProjectList";
-import SkillAndExperience from "./sections/SkillAndExperience";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home_page/HomePage";
+import ProjectDetailPage from "./pages/project_detail_page/ProjectDetailPage";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <div className="max-w-screen-xl	m-auto md:px-8 py-16 flex flex-col gap-16">
-        <Profile />
-        <SkillAndExperience />
-        <ProjectList />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="project/:id" element={<ProjectDetailPage />} />
+    </Routes>
   );
 };
 

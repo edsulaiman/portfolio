@@ -1,5 +1,6 @@
-import Label from "../components/Label";
-import Title from "../components/Title";
+import { Link } from "react-router-dom";
+import Label from "../../../components/Label";
+import Title from "../../../components/Title";
 
 const ProjectImage = () => {
   return <div className="aspect-video bg-primary rounded-lg"></div>;
@@ -18,10 +19,10 @@ const ProjectTitle = () => {
 
 const Project = () => {
   return (
-    <div className="flex flex-col gap-4 col-span-12 md:col-span-6 lg:col-span-4">
+    <Link to="/project/1" className="flex flex-col gap-4 col-span-12 md:col-span-6 lg:col-span-4">
       <ProjectImage />
       <ProjectTitle />
-    </div>
+    </Link>
   );
 };
 

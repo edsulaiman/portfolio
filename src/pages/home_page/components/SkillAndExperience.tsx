@@ -1,5 +1,5 @@
-import Subtitle from "../components/Subtitle";
-import Title from "../components/Title";
+import Subtitle from "../../../components/Subtitle";
+import Title from "../../../components/Title";
 
 const SkillBar = () => {
   return (
@@ -73,7 +73,7 @@ const SkillAndExperience = () => {
       <div className="flex-[1]">
         <SkillAndExperienceTitle />
       </div>
-      <div className="flex-[3] flex flex-col gap-8">
+      <div className="flex-[3] flex flex-col gap-8 md:gap-16">
         <Skills />
         <Experience />
       </div>
