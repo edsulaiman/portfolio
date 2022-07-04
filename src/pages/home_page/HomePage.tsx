@@ -1,5 +1,5 @@
-import Header from "./components/Header";
 import Profile from "../../components/Profile";
+import Header from "./components/Header";
 import ProjectList from "./components/ProjectList";
 import SkillAndExperience from "./components/SkillAndExperience";
 

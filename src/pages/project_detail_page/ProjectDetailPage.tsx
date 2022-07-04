@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Title from "../../components/Title";
 import Profile from "../../components/Profile";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 type ProjectItemProp = {
   image: string;
@@ -67,11 +70,22 @@ const ProjectImageCarousel = () => {
 };
 
 const ProjectDetailPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   return (
-    <div className="flex flex-col gap-16 max-w-screen-lg m-auto p-8">
-      <ProjectImageCarousel />
-      <div className="flex flex-col gap-8">
-        <Title value="Lorem ipsum dolor sit amet" />
+    <>
+      <div className="flex flex-col gap-16 max-w-screen-lg m-auto p-8">
+        <div className="flex flex-col gap-8">
+          <div className="flex justify-between items-center">
+            <Title value="Lorem ipsum dolor sit amet" />
+            <Link to="/">
+              <FontAwesomeIcon icon={faTimes} size="2x" />
+            </Link>
+          </div>
+          <ProjectImageCarousel />
+        </div>
         <div className="text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas arcu. Donec eleifend gravida lectus id congue. Donec a dapibus justo. Nam
           interdum erat vitae metus pretium euismod. Nunc congue vehicula turpis. Pellentesque hendrerit finibus tempus. Sed feugiat, ligula eget tincidunt
@@ -80,9 +94,9 @@ const ProjectDetailPage = () => {
           orci eget eros tincidunt, in finibus dolor dapibus. Etiam aliquam eros id ante gravida bibendum vitae quis arcu. Curabitur vehicula pellentesque dui,
           quis fringilla ante sodales nec.
         </div>
+        <Profile />
       </div>
-      <Profile />
-    </div>
+    </>
   );
 };
 
