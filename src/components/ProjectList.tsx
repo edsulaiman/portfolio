@@ -80,7 +80,7 @@ const ProjectList = (props: ProjectListProps) => {
   return (
     <div className="flex flex-col gap-8 px-8 md:px-0">
       <Title value="Projects" />
-      <div className="grid grid-cols-12 gap-8">{projectChildren}</div>
+      <div className="block md:grid grid-cols-12 gap-8">{projectChildren}</div>
     </div>
   );
 };
