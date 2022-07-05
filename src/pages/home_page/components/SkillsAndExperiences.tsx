@@ -1,4 +1,5 @@
 import { ReactNode, useContext } from "react";
+import ReactMarkdown from "react-markdown";
 import { AppContext } from "../../../AppController";
 import Subtitle from "../../../components/Subtitle";
 import Title from "../../../components/Title";
@@ -39,7 +40,9 @@ const Skills = () => {
   return (
     <div className="flex flex-col gap-4">
       <Subtitle value="Skills" />
-      <div>{configs?.skills}</div>
+      <div className="flex flex-col gap-4">
+        <ReactMarkdown>{configs?.skills ?? ""}</ReactMarkdown>
+      </div>
       {skillChildren}
     </div>
   );
@@ -58,7 +61,9 @@ const Experiences = () => {
   return (
     <div className="flex flex-col gap-4">
       <Subtitle value="Experiences" />
-      <div>{configs?.experiences}</div>
+      <div className="flex flex-col gap-4">
+        <ReactMarkdown>{configs?.experiences ?? ""}</ReactMarkdown>
+      </div>
       <div className="grid grid-cols-12 gap-4">{experienceChildren}</div>
     </div>
   );
@@ -71,8 +76,10 @@ const SkillsAndExperiencesTitle = () => {
   return (
     <div className="flex flex-col gap-16">
       <Title value="Skills & Experiences" />
-      <img src="https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/618c0d8ea6fb53d41950d8d1_Spot-Policy%26Safety.svg" />
-      <div>{configs?.skillsAndExperiences}</div>
+      <img src={process.env.PUBLIC_URL + "/assets/illustrations/DrawKit Vector Illustration Team Work (11).svg"} />
+      <div className="flex flex-col gap-4 md:text-lg">
+        <ReactMarkdown>{configs?.skillsAndExperiences ?? ""}</ReactMarkdown>
+      </div>
     </div>
   );
 };

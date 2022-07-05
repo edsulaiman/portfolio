@@ -23,7 +23,7 @@ const ProjectImageThumbnail = (props: ProjectItemProps) => {
       src={props.image}
       className={
         (props.index === props.currentIndex ? "border-primary border-4 " : "border-gray border-2 ") +
-        "rounded-lg flex justify-center bg-gray aspect-video overflow-hidden object-cover cursor-pointer col-span-4 md:col-span-2"
+        "rounded-lg flex justify-center bg-gray aspect-video overflow-hidden object-cover cursor-pointer col-span-4 md:col-span-2 hover:scale-105 transition duration-150 ease-in"
       }
       onClick={props.onClick}
     />

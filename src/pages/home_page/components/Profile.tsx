@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import ReactMarkdown from "react-markdown";
 import { AppContext } from "../../../AppController";
 import SocialMedia from "../../../components/SocialMedia";
 
@@ -22,7 +23,9 @@ const ProfileDetail = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="text-2xl text-primary font-bold hidden lg:block">About Me</div>
-      <div className="text-onBackground">{profile?.description}</div>
+      <div className="text-onBackground flex flex-col gap-4">
+        <ReactMarkdown>{profile?.description ?? ""}</ReactMarkdown>
+      </div>
     </div>
   );
 };

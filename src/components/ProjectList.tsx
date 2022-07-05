@@ -35,7 +35,10 @@ type ProjectProps = {
 
 const Project = (props: ProjectProps) => {
   return (
-    <Link to={"/project/" + props.index} className="flex flex-col gap-4 col-span-12 md:col-span-6 lg:col-span-4">
+    <Link
+      to={"/project/" + props.index}
+      className="flex flex-col gap-4 col-span-12 md:col-span-6 lg:col-span-4 hover:text-primary hover:scale-105 transition duration-150 ease-in"
+    >
       <ProjectImage image={props.image} />
       <ProjectTitle label={props.label} title={props.title} />
     </Link>

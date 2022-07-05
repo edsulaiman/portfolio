@@ -5,6 +5,7 @@ import SocialMedia from "../../components/SocialMedia";
 import { AppContext } from "../../AppController";
 import ProjectTitle from "./components/ProjectTitle";
 import ProjectImageCarousel from "./components/ProjectImageCarousel";
+import ReactMarkdown from "react-markdown";
 
 const ProjectDetailPage = () => {
   const { id } = useParams();
@@ -29,7 +30,9 @@ const ProjectDetailPage = () => {
             <ProjectTitle title={project!.title} />
             <ProjectImageCarousel />
           </div>
-          <div className="text-lg">{project?.description ?? "No description"}</div>
+          <div className="flex flex-col gap-4 text-lg">
+            <ReactMarkdown>{project?.description ?? "No description"}</ReactMarkdown>
+          </div>
         </div>
         <ProjectList mainSection={false} />
         <div className="px-8 md:px-0">

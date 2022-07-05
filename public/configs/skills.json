@@ -1,22 +1,30 @@
 [
   {
     "name": "C#",
-    "value": 80
+    "value": 75
   },
   {
     "name": "Dart",
     "value": 70
   },
   {
-    "name": "Dotnet Core",
+    "name": ".NET Core",
     "value": 60
   },
   {
     "name": "ASP.NET Core Web API",
-    "value": 80
+    "value": 85
   },
   {
     "name": "Flutter",
     "value": 80
+  },
+  {
+    "name": "React",
+    "value": 60
+  },
+  {
+    "name": "TailwindCSS",
+    "value": 85
   }
 ]
