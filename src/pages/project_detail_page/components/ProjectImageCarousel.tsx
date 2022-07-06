@@ -10,22 +10,18 @@ type ProjectItemProps = {
 };
 
 const ProjectImage = (props: ProjectItemProps) => {
-  return (
-    <div className="rounded-lg flex justify-center bg-gray aspect-video overflow-hidden">
-      <img className="max-h-full" src={props.image} />
-    </div>
-  );
+  return <div className="aspect-video bg-gray rounded-lg bg-center bg-contain bg-no-repeat" style={{ backgroundImage: "url(" + props.image + ")" }}></div>;
 };
 
 const ProjectImageThumbnail = (props: ProjectItemProps) => {
   return (
-    <img
-      src={props.image}
+    <div
       className={
         (props.index === props.currentIndex ? "border-primary border-4 " : "border-gray border-2 ") +
-        "rounded-lg flex justify-center bg-gray aspect-video overflow-hidden object-cover cursor-pointer col-span-4 md:col-span-2 hover:scale-105 transition duration-150 ease-in"
+        "rounded-lg flex justify-center aspect-video  bg-gray bg-cover bg-center bg-no-repeat cursor-pointer col-span-4 md:col-span-2 hover:scale-105 transition duration-150 ease-in"
       }
       onClick={props.onClick}
+      style={{ backgroundImage: "url(" + props.image + ")" }}
     />
   );
 };
