@@ -34,7 +34,7 @@ const ProjectDetailPage = () => {
             <ReactMarkdown>{project?.description ?? "No description"}</ReactMarkdown>
           </div>
         </div>
-        <ProjectList mainSection={false} />
+        <ProjectList mainSection={false} currentProjectIndex={parseInt(id!)} />
         <div className="px-8 md:px-0">
           <SocialMedia />
         </div>

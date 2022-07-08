@@ -4,20 +4,24 @@
     "value": 75
   },
   {
-    "name": "Dart",
-    "value": 70
-  },
-  {
     "name": ".NET Core",
-    "value": 60
+    "value": 75
   },
   {
     "name": "ASP.NET Core Web API",
     "value": 85
   },
   {
+    "name": "Dart",
+    "value": 70
+  },
+  {
     "name": "Flutter",
     "value": 80
+  },
+  {
+    "name": "Typescript",
+    "value": 55
   },
   {
     "name": "React",
@@ -25,6 +29,10 @@
   },
   {
     "name": "TailwindCSS",
-    "value": 85
+    "value": 75
+  },
+  {
+    "name": "PostgresSQL",
+    "value": 60
   }
 ]

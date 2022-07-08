@@ -9,7 +9,12 @@ type ProjectImageProps = {
 };
 
 const ProjectImage = (props: ProjectImageProps) => {
-  return <div className="aspect-video bg-primary rounded-lg bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url(" + props.image + ")" }}></div>;
+  return (
+    <div
+      className="aspect-video bg-primary rounded-lg bg-center bg-cover bg-no-repeat border-gray border-2"
+      style={{ backgroundImage: "url(" + props.image + ")" }}
+    ></div>
+  );
 };
 
 type ProjectTitleProps = {
@@ -47,17 +52,20 @@ const Project = (props: ProjectProps) => {
 
 type ProjectListProps = {
   mainSection: boolean;
+  currentProjectIndex?: number;
 };
 
 const ProjectList = (props: ProjectListProps) => {
-  const generateRandom = (min = 0, max = 100) => {
-    const difference = max - min;
-    let rand = Math.random();
+  const shuffle = (list: number[]) => {
+    var j, x, i;
+    for (i = list.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = list[i];
+      list[i] = list[j];
+      list[j] = x;
+    }
 
-    rand = Math.floor(rand * difference);
-    rand = rand + min;
-
-    return rand;
+    return list;
   };
 
   const appController = useContext(AppContext);
@@ -66,21 +74,45 @@ const ProjectList = (props: ProjectListProps) => {
   const projectChildren: ReactNode[] = [];
   if (props.mainSection) {
     projects?.map((e, index) => {
-      projectChildren.push(<Project index={index} label={e.label} title={e.title} image={e.image[0]} />);
+      const project: ProjectProps = {
+        index: index,
+        label: e.label,
+        title: e.title,
+        image: e.images[0],
+      };
+
+      projectChildren.push(<Project {...project} />);
     });
   } else {
-    const maxProject = projects!.length > 3 ? 3 : projects?.length;
-    for (let i = 0; i < maxProject!; i++) {
-      const index = generateRandom(0, projects?.length);
-      const e = projects![index];
-      projectChildren.push(<Project index={index} label={e.label} title={e.title} image={e.image[0]} />);
+    let projectIndex: number[] = [];
+    projects?.map((e, index) => projectIndex.push(index));
+    projectIndex = projectIndex.filter((e) => e != props.currentProjectIndex);
+    projectIndex = shuffle(projectIndex);
+
+    const maxProject = projectIndex!.length > 3 ? 3 : projectIndex!.length;
+    for (;;) {
+      if (projectIndex.length > maxProject) {
+        projectIndex.pop();
+      } else {
+        break;
+      }
     }
+
+    projectIndex.map((e) => {
+      const project: ProjectProps = {
+        index: e,
+        label: projects![e].label,
+        title: projects![e].title,
+        image: projects![e].images[0],
+      };
+      projectChildren.push(<Project {...project} />);
+    });
   }
 
   return (
     <div className="flex flex-col gap-8 px-8 md:px-0">
       <Title value="Projects" />
-      <div className="block md:grid grid-cols-12 gap-8">{projectChildren}</div>
+      {projectChildren.length != 0 ? <div className="flex flex-col md:grid grid-cols-12 gap-8">{projectChildren}</div> : <div>No projects to show</div>}
     </div>
   );
 };

@@ -37,9 +37,9 @@ const ProjectImageCarousel = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <ProjectImage image={project!.image[currentIndex]} />
+      <ProjectImage image={project!.images[currentIndex]} />
       <div className="grid grid-cols-12 gap-4">
-        {project!.image.map((e, index) => (
+        {project!.images.map((e, index) => (
           <ProjectImageThumbnail index={index} currentIndex={currentIndex} image={e} onClick={() => changeIndex(index)} />
         ))}
       </div>
