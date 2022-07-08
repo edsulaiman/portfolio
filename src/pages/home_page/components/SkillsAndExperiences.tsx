@@ -1,6 +1,6 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
-import { AppContext } from "../../../AppController";
+import { useAppContext } from "../../../AppContext";
 import Subtitle from "../../../components/Subtitle";
 import Title from "../../../components/Title";
 import { ExperienceModel } from "../../../models/ExperienceModel";
@@ -28,9 +28,9 @@ const ExperienceCard = (props: ExperienceModel) => {
 };
 
 const Skills = () => {
-  const appController = useContext(AppContext);
-  const configs = appController?.configs;
-  const skills = appController?.skills;
+  const appProvider = useAppContext();
+  const configs = appProvider!.configs;
+  const skills = appProvider!.skills;
 
   const skillChildren: ReactNode[] = [];
   skills?.map((e) => {
@@ -49,9 +49,9 @@ const Skills = () => {
 };
 
 const Experiences = () => {
-  const appController = useContext(AppContext);
-  const configs = appController?.configs;
-  const experiences = appController?.experiences;
+  const appProvider = useAppContext();
+  const configs = appProvider!.configs;
+  const experiences = appProvider!.experiences;
 
   const experienceChildren: ReactNode[] = [];
   experiences?.map((e) => {
@@ -70,8 +70,8 @@ const Experiences = () => {
 };
 
 const SkillsAndExperiencesTitle = () => {
-  const appController = useContext(AppContext);
-  const configs = appController?.configs;
+  const appProvider = useAppContext();
+  const configs = appProvider!.configs;
 
   return (
     <div className="flex flex-col gap-16">

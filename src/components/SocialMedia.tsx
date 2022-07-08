@@ -1,12 +1,12 @@
 import { faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode, useContext } from "react";
-import { AppContext } from "../AppController";
+import { ReactNode } from "react";
+import { useAppContext } from "../AppContext";
 
 const SocialMedia = () => {
-  const appController = useContext(AppContext);
-  const social = appController?.profile?.social;
+  const appProvider = useAppContext();
+  const social = appProvider!.profile?.social;
 
   if (social == null) {
     return <div></div>;

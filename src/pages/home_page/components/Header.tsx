@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { AppContext } from "../../../AppController";
+import { useAppContext } from "../../../AppContext";
 
 const Header = () => {
-  const appController = useContext(AppContext);
-  const profile = appController?.profile;
+  const appProvider = useAppContext();
+  const profile = appProvider!.profile;
 
   return (
     <div className="bg-primary w-full h-96 flex flex-col items-center justify-center gap-4">

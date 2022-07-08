@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import ReactMarkdown from "react-markdown";
-import { AppContext } from "../../../AppController";
+import { useAppContext } from "../../../AppContext";
 import SocialMedia from "../../../components/SocialMedia";
 
 const ProfileAvatar = () => {
-  const appController = useContext(AppContext);
-  const profile = appController?.profile;
+  const appProvider = useAppContext();
+  const profile = appProvider!.profile;
 
   return (
     <div className="flex flex-col justify-center items-center h-full">
@@ -17,8 +16,8 @@ const ProfileAvatar = () => {
 };
 
 const ProfileDetail = () => {
-  const appController = useContext(AppContext);
-  const profile = appController?.profile;
+  const appProvider = useAppContext();
+  const profile = appProvider!.profile;
 
   return (
     <div className="flex flex-col gap-4">

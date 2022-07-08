@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { AppContext } from "../../../AppController";
+import { useAppContext } from "../../../AppContext";
 
 type ProjectItemProps = {
   image: string;
@@ -28,12 +28,16 @@ const ProjectImageThumbnail = (props: ProjectItemProps) => {
 
 const ProjectImageCarousel = () => {
   const { id } = useParams();
-  const appController = useContext(AppContext);
-  const project = appController!.projects!.at(parseInt(id!));
+
+  const appProvider = useAppContext();
+  const project = appProvider!.projects!.at(parseInt(id!));
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const changeIndex = (index: number) => setCurrentIndex(index);
 
-  const changeIndex = (index: number) => setCurrentIndex(() => index);
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [id]);
 
   return (
     <div className="flex flex-col gap-4">

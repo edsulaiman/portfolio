@@ -1,6 +1,6 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../AppController";
+import { useAppContext } from "../AppContext";
 import Label from "./Label";
 import Title from "./Title";
 
@@ -68,8 +68,8 @@ const ProjectList = (props: ProjectListProps) => {
     return list;
   };
 
-  const appController = useContext(AppContext);
-  const projects = appController?.projects;
+  const appProvider = useAppContext();
+  const projects = appProvider!.projects;
 
   const projectChildren: ReactNode[] = [];
   if (props.mainSection) {
